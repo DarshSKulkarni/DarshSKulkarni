@@ -69,6 +69,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
+
     steps:
       - name: generate trophy.svg
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
@@ -82,15 +83,16 @@ jobs:
           margin-height: 8
           no-background: false
           no-frame: false
+
       - name: push trophy.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: trophy-output
           build_dir: dist
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-
-        name: Generate arcade animation
+          name: Generate arcade animation
 
 on:
   schedule: # execute every 12 hours
@@ -109,18 +111,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
-  steps:
+    steps:
       - name: generate pacman-contribution-graph.svg
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
           games: 'pacman'
 
-   - name: push pacman-contribution-graph.svg to the output branch
+
+      - name: push pacman-contribution-graph.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: pacman-output
           build_dir: dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
