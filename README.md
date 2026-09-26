@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-<!--
+
 **DarshSKulkarni/DarshSKulkarni** is a ✨ _special_ ✨ repository because its<h1 data-importer="text" align="center">Hey 👋What's Up?</h1>
 
 ###
@@ -49,4 +49,3 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
